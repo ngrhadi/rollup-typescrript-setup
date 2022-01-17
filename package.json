@@ -1,0 +1,32 @@
+{
+  "name": "rollup-setup",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "browsersync": "npx browser-sync start -c bs-config.js",
+    "watch": "npx rollup --config rollup.config.js --config-dev -w",
+    "dev": "run-p watch browsersync",
+    "compile": "npx rollup --config rollup.config.js",
+    "build": "run-s compile",
+    "test": "npx jest"
+  },
+  "author": "ngrhadi",
+  "license": "ISC",
+  "devDependencies": {
+    "@rollup/plugin-typescript": "^8.3.0",
+    "@types/jest": "^27.4.0",
+    "browser-sync": "^2.27.7",
+    "jest": "^27.4.7",
+    "npm-run-all": "^4.1.5",
+    "promise-polyfill": "^8.2.1",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.64.0",
+    "rollup-plugin-clear": "^2.0.7",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-polyfill": "^3.0.0",
+    "rollup-plugin-terser": "^7.0.2",
+    "systemjs": "^6.11.0",
+    "typescript": "^4.5.4"
+  }
+}
